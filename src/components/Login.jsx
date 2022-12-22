@@ -36,7 +36,7 @@ function Login({ width, height }) {
 
     const options = {
       method: "POST",
-      url: "/login",
+      url: "https://long-plum-cobra-kit.cyclic.app/login",
       data: passedData,
     };
 

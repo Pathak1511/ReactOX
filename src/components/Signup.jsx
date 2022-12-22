@@ -31,7 +31,7 @@ function Signup({ width, height }) {
   let AftergetData = async () => {
     const options = {
       method: "POST",
-      url: "/createAccount",
+      url: "https://long-plum-cobra-kit.cyclic.app/createAccount",
       data: passedData,
     };
 

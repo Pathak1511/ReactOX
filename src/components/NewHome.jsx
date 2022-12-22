@@ -20,7 +20,9 @@ function NewHome({ width, height, data }) {
     setMyEmail(state.data);
 
     async function getdetails() {
-      const data = await axios.get("/PlayedByX");
+      const data = await axios.get(
+        "https://long-plum-cobra-kit.cyclic.app/PlayedByX"
+      );
 
       setstate(data.data.data);
     }

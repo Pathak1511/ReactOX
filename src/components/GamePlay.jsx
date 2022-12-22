@@ -62,7 +62,9 @@ function GamePlay({ width, height }) {
     setOtherEmail(state[1].otherEmail);
 
     let data = async () => {
-      const Response = await axios.get("/PlayedByX");
+      const Response = await axios.get(
+        "https://long-plum-cobra-kit.cyclic.app//PlayedByX"
+      );
 
       for (let i = 0; i < Response.data.data.length; i++) {
         if (
