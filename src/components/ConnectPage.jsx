@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./index.css";
-import axios from "axios";
 
 function ConnectPage({ width, height }) {
   const navigate = useNavigate();
