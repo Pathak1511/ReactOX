@@ -17,14 +17,9 @@ function App() {
     function handleWindowResize() {
       setWindowSize(getWindowSize());
     }
-
-    const options = {
-      method: "GET",
-      url: "/PlayedByX",
-    };
     async function getdetails() {
       await axios
-        .get("/PlayedByX")
+        .get("https://long-plum-cobra-kit.cyclic.app/PlayedByX")
         .then(function (response) {
           setstate(response.data.data);
         })
