@@ -57,13 +57,21 @@ function GamePlay({ width, height }) {
   //console.log(state);
   let minedata = new Array();
 
+  function afterDisplay() {
+    setInterval(() => {
+      setplayer1won(false);
+      setplayer2won(false);
+      setPlayer1(true);
+    }, 2000);
+  }
+
   useEffect(() => {
     setMyEmail(state[0].email);
     setOtherEmail(state[1].otherEmail);
 
     let data = async () => {
       const Response = await axios.get(
-        "https://long-plum-cobra-kit.cyclic.app//PlayedByX"
+        "https://long-plum-cobra-kit.cyclic.app/PlayedByX"
       );
 
       for (let i = 0; i < Response.data.data.length; i++) {
@@ -137,6 +145,8 @@ function GamePlay({ width, height }) {
         if (checkwin() === 1) {
           console.log("x won");
           setplayer1won(true);
+          afterDisplay();
+          string = [3, 4, 5, 6, 7, 8, 9, 10, 11];
         }
       } else {
         setString(index * 1, false);
@@ -144,6 +154,8 @@ function GamePlay({ width, height }) {
         if (checkwin() === 1) {
           console.log("y won");
           setplayer2won(true);
+          afterDisplay();
+          string = [3, 4, 5, 6, 7, 8, 9, 10, 11];
         }
       }
     }
@@ -216,9 +228,9 @@ function GamePlay({ width, height }) {
 
         {/* Box */}
         <div className="bg-orange-400">
-          <div className="flex justify-between mb-1 mx-2">
+          <div className="flex justify-between mb-1 ">
             <button
-              className="bg-gray-100 px-14 py-14 relative "
+              className="bg-gray-100 w-28 h-28 relative "
               onClick={() => Handlerbtn(0)}
             >
               <div className="absolute top-3 left-3">
@@ -234,7 +246,7 @@ function GamePlay({ width, height }) {
               </div>
             </button>
             <button
-              className="bg-gray-100 px-14 py-14 relative"
+              className="bg-gray-100 w-28 h-28 mx-1 relative"
               onClick={() => Handlerbtn(1)}
             >
               <div className="absolute top-3 left-3">
@@ -250,7 +262,7 @@ function GamePlay({ width, height }) {
               </div>
             </button>
             <button
-              className="bg-gray-100 px-14 py-14 relative"
+              className="bg-gray-100  w-28 h-28  relative"
               onClick={() => Handlerbtn(2)}
             >
               <div className="absolute top-3 left-3">
@@ -266,9 +278,9 @@ function GamePlay({ width, height }) {
               </div>
             </button>
           </div>
-          <div className="flex justify-between mb-1 mx-2">
+          <div className="flex justify-between mb-1">
             <button
-              className="bg-gray-100 px-14 py-14 relative"
+              className="bg-gray-100  w-28 h-28 relative"
               onClick={() => Handlerbtn(3)}
             >
               <div className="absolute top-3 left-3">
@@ -284,7 +296,7 @@ function GamePlay({ width, height }) {
               </div>
             </button>
             <button
-              className="bg-gray-100 px-14 py-14 relative"
+              className="bg-gray-100 w-28 h-28 mx-1 relative"
               onClick={() => Handlerbtn(4)}
             >
               <div className="absolute top-3 left-3">
@@ -300,7 +312,7 @@ function GamePlay({ width, height }) {
               </div>
             </button>
             <button
-              className="bg-gray-100 px-14 py-14 relative"
+              className="bg-gray-100 w-28 h-28 relative"
               onClick={() => Handlerbtn(5)}
             >
               <div className="absolute top-3 left-3">
@@ -317,9 +329,9 @@ function GamePlay({ width, height }) {
             </button>
           </div>
 
-          <div className="flex justify-between mb-1 mx-2">
+          <div className="flex justify-between mb-1">
             <button
-              className="bg-gray-100 px-14 py-14 relative"
+              className="bg-gray-100 h-28 w-28 relative"
               onClick={() => Handlerbtn(6)}
             >
               <div className="absolute top-3 left-3">
@@ -335,7 +347,7 @@ function GamePlay({ width, height }) {
               </div>
             </button>
             <button
-              className="bg-gray-100 px-14 py-14 relative"
+              className="bg-gray-100 w-28 h-28 mx-1 relative"
               onClick={() => Handlerbtn(7)}
             >
               <div className="absolute top-3 left-3">
@@ -351,7 +363,7 @@ function GamePlay({ width, height }) {
               </div>
             </button>
             <button
-              className="bg-gray-100 px-14 py-14 relative"
+              className="bg-gray-100 w-28 h-28 relative"
               onClick={() => Handlerbtn(8)}
             >
               <div className="absolute top-3 left-3">
