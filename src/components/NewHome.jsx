@@ -24,17 +24,17 @@ function NewHome({ width, height, data }) {
         "https://long-plum-cobra-kit.cyclic.app/PlayedByX"
       );
 
-      setstate(data.data.data);
+      //setstate(data.data.data);
     }
     getdetails();
 
-    for (let i = 0; i < states.length; i++) {
-      if (states[i].email !== state.data) {
-        arr.push(states[i].email);
-      }
-    }
+    // for (let i = 0; i < states.length; i++) {
+    //   if (states[i].email !== state.data) {
+    //     arr.push(states[i].email);
+    //   }
+    // }
 
-    arr.filter((x) => emailArr.push({ email: x }));
+    // arr.filter((x) => emailArr.push({ email: x }));
     setBoolReceive(true);
   }, []);
 
