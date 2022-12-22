@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300;1,500&display=swap");
+.home-1 {
+  background-color: "#f8f8f8";
+  height: 65%;
+  padding-top: 55%;
+  padding-left: 36%;
+  padding-right: 35%;
+}
+
+.fonts {
+  font-family: "Roboto", sans-serif;
+}
+
+.inputWidth {
+  width: 100%;
+}
